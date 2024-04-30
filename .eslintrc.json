@@ -1,0 +1,35 @@
+{
+  "root": true,
+  "ignorePatterns": [
+    "**/node_modules/**",
+    "/built/**",
+    "/tests/**",
+    "/lib/**",
+    "/src/lib/*.generated.d.ts",
+    "/scripts/**/*.js",
+    "/scripts/**/*.d.*",
+    "/internal/**",
+    "/coverage/**"
+  ],
+  "overrides": [
+    {
+      "files": ["*.mjs", "*.mts"],
+      "rules": {
+        "@angular-eslint/directive-selector": ["error", { "type": "attribute", "prefix": "app", "style": "camelCase" }],
+        "@angular-eslint/component-selector": ["error", { "type": "element", "prefix": "app", "style": "kebab-case" }],
+        "max-len": [
+          "error",
+          { "code": 120, "ignoreUrls": true, "ignoreStrings": true, "ignoreTemplateLiterals": true }
+        ],
+        "@typescript-eslint/key-spacing": "error",
+        "@typescript-eslint/keyword-spacing": "error",
+        "@typescript-eslint/comma-spacing": "error",
+        "@typescript-eslint/comma-dangle": "error",
+        "@typescript-eslint/space-before-blocks": "error",
+        "@typescript-eslint/brace-style": "error",
+        "@typescript-eslint/no-extra-parens": "error",
+        "@typescript-eslint/quotes": ["error", "single"]
+      }
+    }
+  ]
+}
